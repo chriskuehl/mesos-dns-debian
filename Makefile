@@ -16,7 +16,7 @@ bin dist:
 # both of these are PHONY in case the version changes...
 .PHONY: bin/mesos-dns
 bin/mesos-dns: bin
-	wget -O '$@' 'https://github.com/mesosphere/mesos-dns/releases/download/$(RELEASE)/mesos-dns-v0.6.0-linux-amd64'
+	wget -O '$@' 'https://github.com/mesosphere/mesos-dns/releases/download/$(RELEASE)/mesos-dns-$(RELEASE)-linux-amd64'
 
 .PHONY: debian/changelog
 debian/changelog:
