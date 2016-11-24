@@ -13,14 +13,11 @@ builddeb: debian/changelog dist
 bin dist:
 	mkdir -p "$@"
 
-# both of these are PHONY in case the version changes...
-.PHONY: bin/mesos-dns
-bin/mesos-dns: bin
+bin/mesos-dns: bin Makefile
 	wget -O '$@' 'https://github.com/mesosphere/mesos-dns/releases/download/$(RELEASE)/mesos-dns-$(RELEASE)-linux-amd64'
 
-.PHONY: debian/changelog
-debian/changelog:
-	rm -rf '$@'
+debian/changelog: Makefile
+	rm -f '$@'
 	DEBFULLNAME="Chris Kuehl" \
 		DEBEMAIL="ckuehl@ocf.berkeley.edu" \
 		VISUAL=true \
