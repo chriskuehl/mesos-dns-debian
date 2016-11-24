@@ -1,0 +1,7 @@
+/bin
+/debian/*.log
+/debian/*.substvars
+/debian/changelog
+/debian/files
+/debian/mesos-dns
+/dist

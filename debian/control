@@ -1,0 +1,16 @@
+Source: mesos-dns
+Section: utils
+Priority: extra
+Maintainer: Chris Kuehl <ckuehl@ocf.berkeley.edu>
+Build-Depends:
+ debhelper (>= 9),
+Standards-Version: 3.9.6
+
+Package: mesos-dns
+Architecture: amd64
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: mesos-dns
+ mesos-dns upstream: https://github.com/mesosphere/mesos-dns
+ crummy mesos-dns packaging: https://github.com/chriskuehl/mesos-dns-debian
